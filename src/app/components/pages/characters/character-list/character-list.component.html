@@ -13,16 +13,17 @@
       <div class="card-inner">
         <div class="header">
           <a [routerLink]="['/character-details', character.id]">
-            <h2>character.name</h2>
+            <h2>{{character.name}}</h2>
           </a>
-          <h4 class="text-muted">character.gender</h4>
-          <small class="text-muted">character.created</small>
+          <h4 class="text-muted">{{character.gender}}</h4>
+          <small class="text-muted">{{character.created}}</small>
 
         </div>
       </div>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound">
+  <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound"
+  *ngIf="characters.length <=0">
     <p>No results.......</p>
   </div>
 </div>
